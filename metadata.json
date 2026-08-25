@@ -1,0 +1,6 @@
+{
+  "name": "Bhagwa",
+  "description": "GPS workout & activity tracker with live route recording, accurate real-time GPS location tracking, split analytics, and shareable workout summary cards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
