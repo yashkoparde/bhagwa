@@ -2,21 +2,62 @@
 <img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
 </div>
 
-# Run and deploy your AI Studio app
+# Bhagwa - GPS Workout & Activity Tracker
 
-This contains everything you need to run your app locally.
+[![Android CI](https://github.com/yashkoparde/bhagwa/actions/workflows/android-ci.yml/badge.svg)](https://github.com/yashkoparde/bhagwa/actions/workflows/android-ci.yml)
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.0.0-purple.svg)](https://kotlinlang.org)
+[![Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-blue.svg)](https://developer.android.com/jetpack/compose)
+[![Gemini](https://img.shields.io/badge/Google%20Gemini-AI%20Coaching-orange.svg)](https://ai.google.dev)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 
-View your app in AI Studio: https://ai.studio/apps/21224932-8995-4d53-af53-7ea43f5851a2
+**Bhagwa** is a cutting-edge GPS workout and activity tracker engineered for runners, cyclists, and fitness enthusiasts. Built with Jetpack Compose, Material 3, and integrated with Google Gemini AI for smart post-workout coaching insights.
 
-## Run Locally
+---
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+## Features
 
+- **Live Route Recording & GPS Tracking**: High-precision fused location tracking with real-time route rendering.
+- **Dynamic Speed Polyline**: Custom Compose Canvas route map color-coded by pacing speed.
+- **Kilometer Split Analytics**: Automated split pacing alerts with audio announcements.
+- **Shareable Workout Flex Cards**: High-resolution branded cards with route polyline for social sharing.
+- **Independence Day Edition**: Special commemorative templates celebrating national fitness.
+- **Gemini AI Coaching**: Intelligent analysis of workout splits, cadence, and heart rate exertion.
+- **Multi-Format Export**: Export route data to GPX, GeoJSON, and KML formats compatible with Strava & Garmin.
+- **Milestones & Gamification**: Streak counter, achievement badges, and personal records showcase.
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
-7. If you have already published your app in AI Studio, please [request upload key reset](https://support.google.com/googleplay/android-developer/answer/9842756#zippy=%2Crequest-an-upload-key-reset) in Google Play Console.
+---
+
+## Screenshots & Visuals
+
+- **Flex Cards Preview**: Open `view_and_download_cards.html` in any modern web browser to preview flex cards.
+- **Test Baseline**: Run `./gradlew test` to execute unit tests and screenshot verifications.
+
+---
+
+## Getting Started
+
+### Prerequisites
+- [Android Studio Iguana | 2023.2.1](https://developer.android.com/studio) or newer
+- JDK 17
+- Android SDK 34
+
+### Run Locally
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yashkoparde/bhagwa.git
+   cd bhagwa
+   ```
+2. Set your Gemini API key in `.env`:
+   ```bash
+   cp .env.example .env
+   # Edit .env and set GEMINI_API_KEY=your_key_here
+   ```
+3. Open in Android Studio, allow Gradle sync to complete, and run on emulator or physical device.
+
+---
+
+## Architecture
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/LOCATION_TRACKING.md](docs/LOCATION_TRACKING.md) for detailed design specifications.
+
+## License
+Distributed under the Apache 2.0 License.
